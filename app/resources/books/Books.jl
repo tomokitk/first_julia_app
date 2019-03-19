@@ -15,6 +15,7 @@ mutable struct Book <: AbstractModel
   title::String
   author::String
   cover::String
+  location::String
 
   Book(;
     ### FIELDS
@@ -22,8 +23,9 @@ mutable struct Book <: AbstractModel
     title = "",
     author = "",
     cover = "",
+    location = "",
   ) = new("books", "id", Symbol[],
-          id, title, author, cover
+          id, title, author, cover, location
           )
 end
 
