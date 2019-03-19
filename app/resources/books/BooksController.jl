@@ -23,6 +23,7 @@ function create()
 
   Book( title = @params(:book_title),
         author = @params(:book_author),
+        location = @params(:book_location),
         cover = cover_path) |> save && redirect_to(:get_bgbooks)
 end
 
